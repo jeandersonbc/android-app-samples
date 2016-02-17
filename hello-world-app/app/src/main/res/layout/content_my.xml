@@ -10,4 +10,9 @@
     tools:showIn="@layout/activity_my"
     tools:context="io.github.jeandersonbc.helloworldapp.MyActivity">
 
+    <EditText
+        android:id="@+id/edit_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/edit_message"/>
 </LinearLayout>
