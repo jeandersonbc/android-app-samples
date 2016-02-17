@@ -13,7 +13,7 @@ import android.widget.EditText;
 
 public class MyActivity extends AppCompatActivity {
 
-    private static final String EXTRA_MESSAGE = "io.github.jeandersonbc.helloworldapp.MESSAGE";
+    static final String EXTRA_MESSAGE = "io.github.jeandersonbc.helloworldapp.MESSAGE";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
