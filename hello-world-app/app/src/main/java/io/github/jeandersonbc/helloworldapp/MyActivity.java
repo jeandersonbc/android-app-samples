@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class MyActivity extends AppCompatActivity {
 
@@ -22,7 +23,7 @@ public class MyActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-       FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -54,13 +55,15 @@ public class MyActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    /** Called when the user clicks the Send button */
+    /**
+     * Gets the content of EditText and displays it in a TextView.
+     *
+     * @param view The "send" button
+     */
     public void sendMessage(View view) {
-        // Do something in response to button
-        Intent intent = new Intent(this, DisplayMessageActivity.class);
         EditText editText = (EditText) findViewById(R.id.edit_message);
         String message = editText.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE, message);
-        startActivity(intent);
+        TextView displayText = (TextView) findViewById(R.id.display_msg);
+        displayText.setText(message);
     }
 }
