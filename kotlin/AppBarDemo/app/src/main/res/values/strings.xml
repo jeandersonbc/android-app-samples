@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AppBarDemo</string>
+    <string name="action_someAction1">Action1</string>
+    <string name="action_someAction2">Action2</string>
 </resources>
