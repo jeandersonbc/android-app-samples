@@ -3,10 +3,10 @@ package com.example.jeandersonbc.recyclerviewdemo;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
-class ContentAdapter extends RecyclerView.Adapter<ContentAdapter.ContentViewHolder> {
+class ContentAdapter extends RecyclerView.Adapter<ContentViewHolder> {
 
     private String[] mDataSet;
 
@@ -22,7 +22,7 @@ class ContentAdapter extends RecyclerView.Adapter<ContentAdapter.ContentViewHold
     @NonNull
     @Override
     public ContentViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        TextView textView = (TextView) LayoutInflater.from(parent.getContext()).inflate(R.layout.tv_list_item, parent, false);
+        View textView = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item, parent, false);
         return new ContentViewHolder(textView);
     }
 
@@ -37,17 +37,4 @@ class ContentAdapter extends RecyclerView.Adapter<ContentAdapter.ContentViewHold
         return mDataSet.length;
     }
 
-    static class ContentViewHolder extends RecyclerView.ViewHolder {
-
-        private TextView mListItem;
-
-        ContentViewHolder(TextView itemView) {
-            super(itemView);
-            mListItem = itemView;
-        }
-
-        void bind(String content) {
-            mListItem.setText(content);
-        }
-    }
 }
