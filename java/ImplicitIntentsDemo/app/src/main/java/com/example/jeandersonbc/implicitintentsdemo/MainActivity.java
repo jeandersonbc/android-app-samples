@@ -5,7 +5,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,20 +12,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+    }
 
+    public void openGithubProfile(View view) {
+        Uri webPage = Uri.parse("https://github.com/jeandersonbc");
+        Intent intent = new Intent(Intent.ACTION_VIEW, webPage);
 
-        Button mGithubButton = findViewById(R.id.button_openGitHub);
-        mGithubButton.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                Uri webPage = Uri.parse("https://github.com/jeandersonbc");
-                Intent intent = new Intent(Intent.ACTION_VIEW, webPage);
-                if (intent.resolveActivity(getPackageManager()) != null) {
-                    startActivity(intent);
-                }
-            }
-        });
+        // Always check if there's someone able to resolve this intent
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
     }
 
 }
