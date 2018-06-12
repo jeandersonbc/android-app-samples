@@ -4,23 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="81dp">
 
     <Button
-        android:id="@+id/button_openGitHub"
-        android:layout_width="88dp"
-        android:layout_height="48dp"
-        android:layout_marginBottom="135dp"
-        android:layout_marginEnd="149dp"
-        android:layout_marginLeft="147dp"
-        android:layout_marginRight="149dp"
-        android:layout_marginStart="147dp"
-        android:layout_marginTop="128dp"
+        android:id="@+id/btn_openGitHub"
+        android:layout_width="125dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:onClick="openGithubProfile"
         android:text="Github"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btn_openSchoolLocation"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_openSchoolLocation"
+        android:layout_width="125dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:onClick="openSchoolLocation"
+        android:text="School"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_openGitHub" />
 </android.support.constraint.ConstraintLayout>
