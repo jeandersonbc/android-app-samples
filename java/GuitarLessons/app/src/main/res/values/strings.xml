@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Guitar Lessons</string>
+    <string name="content_description_bg">Man playing guitar in background</string>
+    <string name="business_name">Guitar Lessons</string>
+    <string name="description">Learn how to play guitar with an expert with more than 40 years of experience!</string>
+    <string name="address">746 Blv Broken Dreams, Hollywood, CA</string>
+    <string name="number">+1 (213) 299 8188</string>
+    <string name="office_hours">Call us anytime any day!</string>
+</resources>
